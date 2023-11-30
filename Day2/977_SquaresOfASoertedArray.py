@@ -21,7 +21,7 @@ class Solution:
         l, r, k = 0, len(nums)-1, len(nums)-1
         result = [0]*len(nums)
 
-        while l <= r: 
+        while l < r: 
             if nums[l]**2 < nums[r]**2: 
                 result[k] = nums[r]**2
                 r -= 1

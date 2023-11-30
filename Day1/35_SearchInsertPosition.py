@@ -35,3 +35,7 @@ class Solution:
          # this is the most important line, the reason to return "right"
          # beacause "right = middle", it is possible, the target is smaller than nums[middle], but bigger than right-1, 
          # so the right would be answer. 
+
+solution = Solution()
+result = solution.searchInsert([2,4,5,6,7,8], 3)
+print(result)
