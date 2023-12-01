@@ -21,8 +21,9 @@ class Solution:
         l, r, k = 0, len(nums)-1, len(nums)-1
         result = [0]*len(nums)
 
-        while l < r: 
-            if nums[l]**2 < nums[r]**2: 
+        while l <= r: # left close, right close
+
+            if nums[l]**2 <= nums[r]**2:  # add "=" right here, will put "right side value" first
                 result[k] = nums[r]**2
                 r -= 1
             else: 
