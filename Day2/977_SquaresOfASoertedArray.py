@@ -32,6 +32,7 @@ class Solution:
             k -= 1
         return result 
 
+# different position of "=" will have different ways, left first or right first?? 
 solution = Solution()
 test = solution.sortedSquares([-7,-3,2,3,11])
 print(test)
