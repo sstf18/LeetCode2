@@ -16,7 +16,7 @@ Output: [0,1]
 
 from typing import List
 
-
+# using unsorted_map , since the "key" is not need to sorted 
 class Solution: 
     def twoSum(self, nums: List[int], target: int ) -> List[int]: 
         record = dict()
