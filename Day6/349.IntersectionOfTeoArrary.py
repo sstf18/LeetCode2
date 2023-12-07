@@ -13,7 +13,7 @@ Explanation: [4,9] is also accepted.
 
 from typing import List
 
-
+# using unsorted_set 
 class Solution: 
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
         set_nums1 = set(nums1)
