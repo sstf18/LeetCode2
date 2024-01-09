@@ -27,10 +27,12 @@ class Solution:
     def getLeftLeaves(self, root):
         if not root: 
             return 0 
+        #left
         leftValue = self.getLeftLeaves(root.left)
         if root.left and not root.left.left and not root.left.right: 
             leftValue = root.left.val
+        #right 
         rightValue = self.getLeftLeaves(root.right)
-
+        #middle 
         sum = leftValue + rightValue
         return sum 
