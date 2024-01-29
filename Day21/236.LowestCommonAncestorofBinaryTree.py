@@ -35,4 +35,4 @@ class Solution:
         elif not left and right: # right exsit, return right
             return right 
         else: 
-            return None
+            return None 
