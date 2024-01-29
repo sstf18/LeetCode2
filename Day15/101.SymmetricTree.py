@@ -24,9 +24,11 @@ class Solution:
         return self.compare(root.left, root.right)
         
     def compare(self, left, right):
+        # first 3 check that left and right is not empty
         if left == None and right != None: return False
         elif left != None and right == None: return False 
         elif left != None and right != None: return True 
+        # check left and right's val is correct 
         elif left.val != right.val: return False 
         
         outside = self.compare(left.left, right.right)
