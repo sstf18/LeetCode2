@@ -13,7 +13,7 @@ Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
 """
 from typing import List
 
-
+# this problem combined the 40 and 46
 class Solution: 
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
         self.result = []
@@ -25,6 +25,7 @@ class Solution:
         if len(self.path) == len(nums):
             self.result.append(self.path[:])
             return 
+        # prevent duplicate using: set()
         uset = set()
         
         for i in range(len(nums)):

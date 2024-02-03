@@ -20,10 +20,13 @@ class Solution:
         return self.result
 
     def backTracking(self, nums, startIndex):
+        # least two elements for each element set in output
         if len(self.path) > 1: 
             self.result.append(self.path[:])
         uset = set()
         for i in range(startIndex, len(nums)):
+            # uset: prevent duplicate elements using multiple times
+            # nums[i] < self.path[-1]: the current elements < last elements: continue
             if nums[i] in uset or (self.path and nums[i] < self.path[-1]): 
                 continue 
             self.path.append(nums[i])
