@@ -24,41 +24,43 @@ from typing import List
 
 class Solution: 
 
-    """
-
     #method 1
 
     def removeElement(self, nums: List[int], val: int) -> int:
         size = len(nums)
+        print("orginal numslist: ", nums)
+        print("size", size)
+
         i = 0 
         while i < size: 
             if nums[i] == val:
+                print("nums[i] == val", i)
                 for j in range(i+1, size):
+                    print("j: ", j)
                     nums[j - 1] = nums [j]
                 size -= 1 
                 i -= 1
             i += 1 
 
         return size
-    
-    """
-    def removeElement(self, nums: List[int], val: int) -> int:
-        slow = 0 
-        fast = 0 
-        size = len(nums)
-        while fast < size: 
-            if nums[fast] != val: 
-                nums[slow] = nums[fast]
-                slow += 1 
-            fast += 1
-        return slow
+
+    # def removeElement(self, nums: List[int], val: int) -> int:
+    #     slow = 0 
+    #     fast = 0 
+    #     size = len(nums)
+    #     while fast < size: 
+    #         if nums[fast] != val: 
+    #             nums[slow] = nums[fast]
+    #             slow += 1 
+    #         fast += 1
+    #     return slow
 
 
 def main():
     solution = Solution()
     test_case = [
-        ([3,2,2,3], 3),
-        ([0,1,2,2,3,0,4,2], 2)
+        ([0,1,2,3,4,5], 3),
+        #([0,1,2,2,3,0,4,2], 2)
     ]
 
     for nums, val in test_case:

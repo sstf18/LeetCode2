@@ -34,13 +34,20 @@ class Solution:
         middle = 0 
 
         while left < right: 
+            print("right", right)
+            print("left", left)
+            print("right - left", (right - left))
             middle = left + (right - left)//2
+            print("middle" , middle)
             if nums[middle] == target: 
+                print("nums[mid] = target")
                 return  middle
             elif nums[middle] < target: 
-                right = middle 
-            elif nums[middle] > target: 
+                print("nums[mid] < target")
                 left = middle + 1
+            elif nums[middle] > target: 
+                print("nums[mid] > target")
+                right = middle
         return -1
 
 def main():
@@ -49,11 +56,11 @@ def main():
 
     # define test cases
     test_cases = [
-        ([1, 2, 3, 4, 5], 3),   # Normal case
-        ([1, 2, 3, 4, 5], 6),   # Target not in list
-        ([], 1),                # Empty list
-        ([1], 1),               # Single element, target is present
-        ([1], 2)                # Single element, target is absent
+        ([-1, 0, 3, 5, 9, 12], 9),   # Normal case
+        #([1, 2, 3, 4, 5], 6),   # Target not in list
+        #([], 1),                # Empty list
+        #([1], 1),               # Single element, target is present
+        #([1], 2)                # Single element, target is absent
     ]
 
     # Test each case
